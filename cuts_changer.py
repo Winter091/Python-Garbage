@@ -45,7 +45,7 @@ with open(args['input'], 'r', encoding='UTF-8') as f:
                     last_word = word
                     break
 
-            if random.randint(1, 5) == 5:
+            if random.randint(1, 8) == 8:
                 while True:
                     one_more_word = random.choice(words)
                     if one_more_word != word:
