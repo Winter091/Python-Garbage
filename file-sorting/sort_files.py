@@ -30,6 +30,8 @@ if not os.path.exists(dir + 'Dirs'):
 
 def move(file, folder):
 
+    os.system('cls')
+
     # User decide to move file or not
     while True:
         ans = input('Move {} to {}? (Y/N) >'.format(file, folder))
@@ -52,9 +54,6 @@ def move(file, folder):
                 break
             except FileExistsError:
                 i += 1
-
-    finally:
-        os.system('cls')
 
 
 for file in os.listdir(dir):
