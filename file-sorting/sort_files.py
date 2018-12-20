@@ -29,7 +29,6 @@ if not os.path.exists(dir + 'Dirs'):
 
 
 def move(file, folder):
-
     os.system('cls')
 
     # User decide to move file or not
@@ -42,15 +41,12 @@ def move(file, folder):
 
     try:
         os.rename(file, folder + '\\' + file)
-        print('Moving', file, 'to', key)
-
     except FileExistsError:
         # If there are a file in new folder with similar name
         i = 1
         while True:
             try:
                 os.rename(file, folder + '\\' + '({}) '.format(str(i)) + file)
-                print('Moving', file, 'to', folder)
                 break
             except FileExistsError:
                 i += 1
